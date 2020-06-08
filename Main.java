@@ -10,17 +10,20 @@ public class Main {
                 "client_id=38e1d17aa75d464785c5849bd72342d2&redirect_uri=http://localhost:8080&response_type=code";
         String input = scanner.nextLine();
 
-        while(  input!= "auth"){
+        while(  !input.equals("auth")){
             if(input.contains("exit")) exit();
             System.out.println("Please, provide access for application.\n");
             input = scanner.nextLine();
         }
+        System.out.println(url);
+        System.out.println();
+        System.out.println("---SUCCESS---\n");
     }
 
     public static void main(String[] args) { 
         Scanner scatter = new Scanner(System.in);
-        String input = scatter.nextLine();
         authorized();
+        String input = scatter.nextLine();
         String[] result = input.split(" ");
         while(!result[0].equals("exit")){
             System.out.println(result[0]);
