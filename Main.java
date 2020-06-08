@@ -1,6 +1,7 @@
 package advisor;
 
 import java.util.Scanner;
+import static java.lang.System.exit;
 
 public class Main {
 
@@ -11,7 +12,7 @@ public class Main {
         String input = scanner.nextLine();
 
         while(  !input.equals("auth")){
-            if(input.contains("exit")) exit();
+            if(input.contains("exit")) exit(0);
             System.out.println("Please, provide access for application.\n");
             input = scanner.nextLine();
         }
@@ -36,7 +37,7 @@ public class Main {
             result = input.split(" ");
 
         }
-        exit();
+        exit_();
     }
 
     public static void new_(){
@@ -70,7 +71,7 @@ public class Main {
                         "Arab Mood Booster  \n" +
                         "Sunday Stroll");
     }
-    public static void exit(){
+    public static void exit_(){
         System.out.println("---GOODBYE!---");
     }
 
